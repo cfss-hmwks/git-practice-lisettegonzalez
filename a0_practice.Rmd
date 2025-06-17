@@ -4,7 +4,7 @@ author: "Lisette Gonzalez"
 date: "`June 17`"
 output: 
   html_document:
-    theme: spacelab
+    theme: journal
 ---
 
 ```{r setup, include=FALSE}
@@ -43,7 +43,7 @@ ggplot(mtcars)+
                       color = factor(cyl),
                       shape = factor(cyl),
                       size = hp))+ 
-                      #label = rownames(mtcars), check_overlap = TRUE) +
+                      #label = #rownames(mtcars), check_overlap = TRUE) +
   theme_bw() +
   scale_color_manual(values = c("black", "gray", "blue") ) +
   labs(title = "Car MPG vs weight", 
@@ -51,5 +51,17 @@ ggplot(mtcars)+
        y = 'Car weight',
        shape="Cylinders", size="Horsepower", color = "Cylinders",
        caption = "Source: mtcars")
+
+```
+### Gapminder exmaple
+```{r}
+library(gapminder)
+data(gapminder)
+```
+
+### BACK to MTCARS
+```{r}
+head(mtcars)
+
 
 ```
